@@ -10,7 +10,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
        
@@ -38,8 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
    
     return Scaffold(
+    
       appBar: AppBar(
-      
+   
       actions:<Widget> [
         IconButton(onPressed: (){
 
@@ -60,8 +63,31 @@ class _MyHomePageState extends State<MyHomePage> {
       
         
       ),
-      body:Container(child: Text("hello"),)
-      
+      body:Container(), //to take bottom use container or center
+      bottomNavigationBar: BottomNavigationBar(items: [
+             BottomNavigationBarItem(icon: IconButton(onPressed: () {
+               
+             },icon: Icon(Icons.home),),
+             label: "home",
+             backgroundColor: Color.fromARGB(255, 245, 155, 21),
+             
+             ),
+             BottomNavigationBarItem(icon: IconButton(onPressed: (){
+
+             },icon: Icon(Icons.alarm),),
+             label: "alaram",
+             backgroundColor: const Color.fromARGB(255, 115, 157, 190)
+             ),
+             BottomNavigationBarItem(icon: IconButton(onPressed: (){
+
+             },icon: Icon(Icons.people),),
+             label: "profile",
+             backgroundColor: Color.fromARGB(255, 76, 43, 168)
+             )
+
+      ],
+      fixedColor: Color.fromARGB(221, 199, 114, 114),
+      )
        );
   }
 }
