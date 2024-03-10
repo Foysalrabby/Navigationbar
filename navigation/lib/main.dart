@@ -43,10 +43,21 @@ class _MyHomePageState extends State<MyHomePage> {
       actions:<Widget> [
         IconButton(onPressed: (){
 
-        }, icon: Icon(Icons.notification_add))
+        }, icon: Icon(Icons.notification_add)),
+        
       ],
+      leading:IconButton(onPressed: () => {
+
+      },icon: IconButton(onPressed: () {
+      
+      },icon: Icon(Icons.menu ,color: Colors.white,),),),
         title: Text(widget.title),
       centerTitle: true,
+      backgroundColor: const Color.fromARGB(255, 235, 186, 9),
+    shape: RoundedRectangleBorder(
+       borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),bottomRight: Radius.circular(10))
+    )
+      
         
       ),
       body:Container(child: Text("hello"),)
